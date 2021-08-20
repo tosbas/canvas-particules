@@ -50,12 +50,10 @@ class Particle {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI)
         ctx.fill();
-        ctx.stroke();
     }
 }
 
 // execute pour chaque particules update et draw 
-
 
 function handleParticle() {
     for (let i = 0; i < particleArray.length; i++) {
@@ -94,3 +92,14 @@ canvas.addEventListener("mousemove", (e) => {
     }
 
 })
+
+canvas.addEventListener("click", (e) => {
+
+    mouse.x = e.offsetX;
+    mouse.y = e.offsetY;
+    hue += 10;
+    for (let i = 0; i < 100; i++) {
+        particleArray.push(new Particle());
+    }
+
+}, { passive: true })

@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: hsl(224, 98%, 58%)
+}
+
 h1 {
     text-align: center;
+    color: hsl(255, 100%, 100%);
 }
 
 canvas {
